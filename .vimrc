@@ -24,6 +24,19 @@ set number
 
 set hidden
 
+set smartcase     " ignore case if search pattern is all lowercase,
+                  "    case-sensitive otherwise
+set hlsearch      " highlight search terms
+set incsearch     " show search matches as you type
+
+set history=1000         " remember more commands and search history
+set undolevels=1000      " use many muchos levels of undo
+set wildignore=*.swp,*.bak,*.pyc,*.class
+set title                " change the terminal's title
+
+" show whitespace
+set list listchars=tab:\ \ ,trail:·
+
 " IMPORTANT: win32 users will need to have 'shellslash' set so that latex
 " can be called correctly.
 set shellslash
