@@ -28,6 +28,7 @@
 [submodule "bundle/vim-latex"]
 	path = bundle/vim-latex
 	url = git://vim-latex.git.sourceforge.net/gitroot/vim-latex/vim-latex
+	ignore = dirty
 [submodule "bundle/haml"]
 	path = bundle/haml
 	url = git://github.com/tpope/vim-haml.git
