@@ -22,6 +22,8 @@ set softtabstop=2
 
 set number
 
+set hidden
+
 " IMPORTANT: win32 users will need to have 'shellslash' set so that latex
 " can be called correctly.
 set shellslash
@@ -81,3 +83,4 @@ hi scalaMethodCall gui=italic
 hi scalaValName gui=underline
 hi scalaVarName gui=underline
 
+let g:LustyJugglerSuppressRubyWarning = 1
