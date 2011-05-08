@@ -24,6 +24,7 @@ set number
 
 set hidden
 
+set ignorecase
 set smartcase     " ignore case if search pattern is all lowercase,
                   "    case-sensitive otherwise
 set hlsearch      " highlight search terms
