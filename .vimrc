@@ -73,6 +73,10 @@ map ¿ \
 " Map it to F12 as well
 map <F12> <C-^>
 
+" Tabs mit ä und ö wechseln (besser wäre alt+ä, alt+ö)
+nmap ä gt
+nmap ö gT
+
 " NERDCommenter ----------------------------------------------------------{{{2
 
 let NERDSpaceDelims = 1
