@@ -54,3 +54,6 @@
 [submodule "bundle/gundo"]
 	path = bundle/gundo
 	url = http://github.com/sjl/gundo.vim.git
+[submodule "bundle/VST"]
+	path = bundle/VST
+	url = https://github.com/vim-scripts/VST.git
