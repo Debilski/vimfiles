@@ -69,6 +69,10 @@ inoremap ¿ \
 " noremap ¿ß \
 map ¿ \
 
+" There is a problem with <C-^> (buffer switching) on some systems.
+" Map it to F12 as well
+map <F12> <C-^>
+
 " NERDCommenter ----------------------------------------------------------{{{2
 
 let NERDSpaceDelims = 1
