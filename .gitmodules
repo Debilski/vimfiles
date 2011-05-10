@@ -57,3 +57,6 @@
 [submodule "bundle/VST"]
 	path = bundle/VST
 	url = https://github.com/vim-scripts/VST.git
+[submodule "bundle/gitv"]
+	path = bundle/gitv
+	url = https://github.com/gregsexton/gitv.git
