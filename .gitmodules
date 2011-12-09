@@ -7,10 +7,10 @@
 	ignore = dirty
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
-	url = git://github.com/wycats/nerdtree.git
+	url = git://github.com/scrooloose/nerdtree.git
 [submodule "bundle/nerdcommenter"]
 	path = bundle/nerdcommenter
-	url = git://github.com/ddollar/nerdcommenter.git
+	url = git://github.com/scrooloose/nerdcommenter.git
 [submodule "bundle/irblack"]
 	path = bundle/irblack
 	url = git://github.com/wgibbs/vim-irblack.git
@@ -73,3 +73,6 @@
 [submodule "bundle/vim-abolish"]
 	path = bundle/vim-abolish
 	url = http://github.com/tpope/vim-abolish
+[submodule "bundle/vim-css-color"]
+	path = bundle/vim-css-color
+	url = git://github.com/skammer/vim-css-color.git
