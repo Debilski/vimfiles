@@ -16,7 +16,7 @@
 	url = git://github.com/wgibbs/vim-irblack.git
 [submodule "bundle/vim-scala"]
 	path = bundle/vim-scala
-	url = git://github.com/bdd/vim-scala.git
+	url = git://github.com/derekwyatt/vim-scala.git
 [submodule "bundle/vim-vividchalk"]
 	path = bundle/vim-vividchalk
 	url = git://github.com/tpope/vim-vividchalk.git
