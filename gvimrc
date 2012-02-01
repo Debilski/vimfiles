@@ -53,6 +53,10 @@ if has("gui_macvim")
 
   map <D-S-CR> :call FancyFull()<CR>
 
+  function OpenQuickView()
+    ! qlmanage -p %:p
+  endfunction
+
 else
   map <M-o> :CommandT<CR>
 endif
