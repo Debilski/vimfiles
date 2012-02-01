@@ -44,6 +44,15 @@ if has("gui_macvim")
     setlocal listchars=tab:\ \ 
   endfunction
 
+  function FancyFull()
+    set lines=60 columns=130
+    set fuoptions=background:#00002b36
+    hi NonText guifg=bg
+    set fullscreen
+  endfunction
+
+  map <D-S-CR> :call FancyFull()<CR>
+
 else
   map <M-o> :CommandT<CR>
 endif
