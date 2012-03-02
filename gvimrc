@@ -54,8 +54,11 @@ if has("gui_macvim")
   map <D-S-CR> :call FancyFull()<CR>
 
   function OpenQuickView()
-    ! qlmanage -p %:p
+    let path = expand('%:p')
+    call system("qlmanage -p 2>/dev/null '" . path . "'")
   endfunction
+
+  map <S-D-Space> :call OpenQuickView()<CR>
 
 else
   map <M-o> :CommandT<CR>
