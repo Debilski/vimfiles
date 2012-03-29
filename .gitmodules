@@ -23,6 +23,7 @@
 [submodule "bundle/command-t"]
 	path = bundle/command-t
 	url = git://git.wincent.com/command-t.git
+	ignore = dirty
 [submodule "bundle/lusty"]
 	path = bundle/lusty
 	url = https://github.com/sjbach/lusty
