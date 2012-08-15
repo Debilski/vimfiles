@@ -6,6 +6,22 @@ endif
 colorscheme ir_black
 syntax on
 
+function SolarLight()
+  colorscheme solarized
+  set background=light
+  set transparency=2
+endfunction
+
+function SolarDark()
+  colorscheme solarized
+  set background=dark
+  set transparency=2
+endfunction
+
+command SolarLight call SolarLight()
+
+command SolarDark call SolarDark()
+
 if has("gui_macvim")
   macmenu &File.Open\.\.\. key=<nop>
   nnoremap <F6> :execute "!vimiterm ".shellescape(getline('.'), 1)<CR>
