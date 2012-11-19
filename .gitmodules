@@ -92,3 +92,6 @@
 [submodule "bundle/ZoomWin"]
 	path = bundle/ZoomWin
 	url = git://github.com/vim-scripts/ZoomWin.git
+[submodule "bundle/vim-sbt"]
+	path = bundle/vim-sbt
+	url = git://github.com/derekwyatt/vim-sbt.git
