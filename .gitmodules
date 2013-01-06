@@ -95,3 +95,6 @@
 [submodule "bundle/vim-sbt"]
 	path = bundle/vim-sbt
 	url = git://github.com/derekwyatt/vim-sbt.git
+[submodule "bundle/gnupg"]
+	path = bundle/gnupg
+	url = https://github.com/vim-scripts/gnupg.vim
