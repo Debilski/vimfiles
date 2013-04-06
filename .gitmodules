@@ -98,3 +98,6 @@
 [submodule "bundle/gnupg"]
 	path = bundle/gnupg
 	url = https://github.com/vim-scripts/gnupg.vim
+[submodule "bundle/julia-vim"]
+	path = bundle/julia-vim
+	url = git://github.com/JuliaLang/julia-vim.git
