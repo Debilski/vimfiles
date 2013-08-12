@@ -18,9 +18,6 @@ function SolarDark()
   set transparency=2
 endfunction
 
-command SolarLight call SolarLight()
-command SolarDark call SolarDark()
-
 if has("gui_macvim")
   colorscheme evening
   set bg=light

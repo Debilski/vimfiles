@@ -50,6 +50,19 @@ Bundle 'henrik/vim-qargs'
 
 set hidden
 
+function SolarLight()
+  colorscheme solarized
+  set background=light
+endfunction
+
+function SolarDark()
+  colorscheme solarized
+  set background=dark
+endfunction
+
+command SolarLight call SolarLight()
+command SolarDark call SolarDark()
+
 imap jj <Esc>
 inoremap ¿ß ¿
 inoremap ¿ \
@@ -81,3 +94,5 @@ hi scalaNew gui=underline
 hi scalaMethodCall gui=italic
 hi scalaValName gui=underline
 hi scalaVarName gui=underline
+
+SolarDark
