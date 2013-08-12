@@ -1,36 +1,26 @@
 set go-=T
-set bg=dark
-if &background == "dark"
-  hi normal guibg=black
-endif
-colorscheme ir_black
-syntax on
 
-function SolarLight()
+function! SolarLight()
   colorscheme solarized
   set background=light
   set transparency=2
 endfunction
 
-function SolarDark()
+function! SolarDark()
   colorscheme solarized
   set background=dark
-  set transparency=2
+set transparency=2
 endfunction
 
+set transparency=2
+
 if has("gui_macvim")
-  colorscheme evening
-  set bg=light
   let macvim_hig_shift_movement = 1
   set selection=exclusive
 
   macmenu &File.Open\.\.\. key=<nop>
   nnoremap <F6> :execute "!vimiterm ".shellescape(getline('.'), 1)<CR>
-  if &background == "dark"
-    hi normal guibg=black
-    set transp=12
-  endif
-  map <D-o> :CommandT<CR>
+  map <D-o> :CtrlP<CR>
 
   " Fullscreen takes up entire screen
   set fuoptions=maxhorz,maxvert
@@ -77,7 +67,7 @@ if has("gui_macvim")
   map <S-D-Space> :call OpenQuickView()<CR>
 
 else
-  map <M-o> :CommandT<CR>
+  map <M-o> :CtrlP<CR>
 endif
 
 

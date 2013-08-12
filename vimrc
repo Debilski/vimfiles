@@ -47,8 +47,29 @@ Bundle 'derekwyatt/vim-scala'
 Bundle 'tpope/vim-vividchalk'
 Bundle 'JuliaLang/julia-vim'
 Bundle 'henrik/vim-qargs'
+Bundle 'kien/ctrlp.vim'
+
+" schemes
+Bundle 'tomasr/molokai'
+Bundle 'zeis/vim-kolor'
+Bundle 'morhetz/gruvbox'
+Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
+Bundle 'wesgibbs/vim-irblack'
+Bundle 'ricardovaleriano/vim-github-theme'
+Bundle '29decibel/codeschool-vim-theme'
+
+
+set number
+set list
 
 set hidden
+set ignorecase
+set smartcase     " ignore case if search pattern is all lowercase,
+                  "    case-sensitive otherwise
+set hlsearch      " highlight search terms
+set incsearch     " show search matches as you type
+
+set wildignore=*.swp,*.bak,*.pyc,*.class
 
 function SolarLight()
   colorscheme solarized
