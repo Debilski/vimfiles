@@ -19,10 +19,14 @@ function SolarDark()
 endfunction
 
 command SolarLight call SolarLight()
-
 command SolarDark call SolarDark()
 
 if has("gui_macvim")
+  colorscheme evening
+  set bg=light
+  let macvim_hig_shift_movement = 1
+  set selection=exclusive
+
   macmenu &File.Open\.\.\. key=<nop>
   nnoremap <F6> :execute "!vimiterm ".shellescape(getline('.'), 1)<CR>
   if &background == "dark"
@@ -33,7 +37,6 @@ if has("gui_macvim")
 
   " Fullscreen takes up entire screen
   set fuoptions=maxhorz,maxvert
-
 
   " Command-Return for fullscreen
   macmenu Window.Toggle\ Full\ Screen\ Mode key=<D-CR>

@@ -1,67 +1,54 @@
-" set t_Co=256
+set nocompatible               " be iMproved
+filetype off                   " required!
 
-set nocompatible
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
 
-filetype off
-call pathogen#helptags()
-call pathogen#runtime_append_all_bundles()
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
 
-" REQUIRED. This makes vim invoke Latex-Suite when you open a tex file.
-filetype plugin on
+" Defaults everyone can agree on
+Bundle 'tpope/vim-sensible'
+Bundle 'tpope/vim-sleuth'
 
-" Better indentation
-filetype plugin indent on
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'tpope/vim-fugitive'
 
-set showcmd
+Bundle 'altercation/vim-colors-solarized'
 
-set autoindent
-set expandtab
-set smarttab
-set shiftwidth=2
-set softtabstop=2
-
-set number
+" Additional plugins
+Bundle 'ack.vim'
+Bundle 'lilydjwg/colorizer'
+Bundle 'git://git.wincent.com/command-t.git'
+Bundle 'gregsexton/gitv'
+Bundle 'gnupg.vim'
+Bundle 'sjl/gundo.vim'
+Bundle 'sjbach/lusty'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/syntastic'
+Bundle 'majutsushi/tagbar'
+Bundle 'tpope/vim-abolish'
+Bundle 'tsaleh/vim-align'
+Bundle 'VimClojure'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'tpope/vim-eunuch'
+Bundle 'tpope/vim-git'
+Bundle 'tpope/vim-haml'
+Bundle 'wgibbs/vim-irblack'
+Bundle 'pangloss/vim-javascript'
+Bundle 'jcf/vim-latex'
+Bundle 'tpope/vim-liquid'
+Bundle 'tpope/vim-markdown'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'derekwyatt/vim-sbt'
+Bundle 'derekwyatt/vim-scala'
+Bundle 'tpope/vim-vividchalk'
+Bundle 'JuliaLang/julia-vim'
+Bundle 'henrik/vim-qargs'
 
 set hidden
-
-set ignorecase
-set smartcase     " ignore case if search pattern is all lowercase,
-                  "    case-sensitive otherwise
-set hlsearch      " highlight search terms
-set incsearch     " show search matches as you type
-
-set history=1000         " remember more commands and search history
-set undolevels=1000      " use many muchos levels of undo
-set wildignore=*.swp,*.bak,*.pyc,*.class
-set title                " change the terminal's title
-
-" show whitespace
-set list listchars=tab:\ \ ,trail:·
-
-" IMPORTANT: win32 users will need to have 'shellslash' set so that latex
-" can be called correctly.
-set shellslash
-
-" IMPORTANT: grep will sometimes skip displaying the file name if you
-" search in a singe file. This will confuse Latex-Suite. Set your grep
-" program to always generate a file-name.
-set grepprg=grep\ -nH\ $*
-let g:Tex_ViewRule_pdf = 'Preview'
-
-" Cool tab completion stuff
-set wildmenu
-set wildmode=list:longest,full
-
-" set backup
-" set backupdir=~/.vim/backup
-" set directory=~/.vim/tmp
-
-if has("gui_macvim")
-    colorscheme evening
-    set bg=light
-    let macvim_hig_shift_movement = 1
-    set selection=exclusive
-endif
 
 imap jj <Esc>
 inoremap ¿ß ¿
@@ -76,16 +63,6 @@ map <F12> <C-^>
 " Tabs mit ä und ö wechseln (besser wäre alt+ä, alt+ö)
 nmap ä gt
 nmap ö gT
-
-" NERDCommenter ----------------------------------------------------------{{{2
-
-let NERDSpaceDelims = 1
-
-" NERDTree ---------------------------------------------------------------{{{2
-
-let NERDTreeIgnore = ['\.pyc$', '\.zwc.*$', '\.o$', '\.class$', '\~$']
-
-set laststatus=2
 
 if has("statusline")
     set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"]\ \"}%k\ %-14.(%l,%c%V%)\ %P
@@ -104,5 +81,3 @@ hi scalaNew gui=underline
 hi scalaMethodCall gui=italic
 hi scalaValName gui=underline
 hi scalaVarName gui=underline
-
-let g:LustyJugglerSuppressRubyWarning = 1
