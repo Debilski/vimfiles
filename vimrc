@@ -12,7 +12,6 @@ Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-sensible'
 Bundle 'tpope/vim-sleuth'
 
-Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-fugitive'
 
 Bundle 'altercation/vim-colors-solarized'
