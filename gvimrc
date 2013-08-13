@@ -18,6 +18,8 @@ if has("gui_macvim")
   let macvim_hig_shift_movement = 1
   set selection=exclusive
 
+  set guifont=Menlo\ for\ powerline:h11
+
   macmenu &File.Open\.\.\. key=<nop>
   nnoremap <F6> :execute "!vimiterm ".shellescape(getline('.'), 1)<CR>
   map <D-o> :CtrlP<CR>

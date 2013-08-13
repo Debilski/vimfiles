@@ -5,7 +5,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
-" required! 
+" required!
 Bundle 'gmarik/vundle'
 
 " Defaults everyone can agree on
@@ -41,7 +41,7 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'jcf/vim-latex'
 Bundle 'tpope/vim-liquid'
 Bundle 'tpope/vim-markdown'
-Bundle 'Lokaltog/vim-powerline'
+Bundle 'bling/vim-airline'
 Bundle 'derekwyatt/vim-sbt'
 Bundle 'derekwyatt/vim-scala'
 Bundle 'tpope/vim-vividchalk'
@@ -58,6 +58,12 @@ Bundle 'wesgibbs/vim-irblack'
 Bundle 'ricardovaleriano/vim-github-theme'
 Bundle '29decibel/codeschool-vim-theme'
 
+" You complete me needs Python an a new vim
+if has('python')
+  if v:version >= 704 || ( v:version == 703 && has('patch584'))
+    Bundle 'Valloric/YouCompleteMe'
+  endif
+endif
 
 set number
 set list
@@ -116,4 +122,10 @@ hi scalaMethodCall gui=italic
 hi scalaValName gui=underline
 hi scalaVarName gui=underline
 
-SolarDark
+" SolarDark
+
+if has("gui_macvim")
+  let macvim_hig_shift_movement = 1
+endif
+
+let g:airline_powerline_fonts = 1
