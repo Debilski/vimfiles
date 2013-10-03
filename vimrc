@@ -17,36 +17,53 @@ Bundle 'tpope/vim-fugitive'
 
 Bundle 'altercation/vim-colors-solarized'
 
+" Languages
+Bundle 'scrooloose/syntastic'
+
+" Scala
+Bundle 'derekwyatt/vim-sbt'
+Bundle 'derekwyatt/vim-scala'
+
+" Julia
+Bundle 'JuliaLang/julia-vim'
+
+" Haskell
+Bundle 'dag/vim2hs'
+Bundle 'ujihisa/neco-ghc'
+Bundle 'eagletmt/ghcmod-vim'
+" needed for ghcmod
+Bundle 'Shougo/vimproc.vim'
+
+" Clojure
+Bundle 'VimClojure'
+
+" Other
+Bundle 'pangloss/vim-javascript'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'tpope/vim-haml'
+Bundle 'jcf/vim-latex'
+Bundle 'tpope/vim-markdown'
+Bundle 'tpope/vim-liquid'
+
 " Additional plugins
+Bundle 'gnupg.vim'
+Bundle 'kien/ctrlp.vim'
 Bundle 'ack.vim'
 Bundle 'lilydjwg/colorizer'
 Bundle 'gregsexton/gitv'
-Bundle 'gnupg.vim'
 Bundle 'sjl/gundo.vim'
 Bundle 'sjbach/lusty'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/syntastic'
 Bundle 'majutsushi/tagbar'
 Bundle 'tpope/vim-abolish'
 Bundle 'tsaleh/vim-align'
-Bundle 'VimClojure'
-Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-eunuch'
 Bundle 'tpope/vim-git'
-Bundle 'tpope/vim-haml'
-Bundle 'pangloss/vim-javascript'
-Bundle 'jcf/vim-latex'
-Bundle 'tpope/vim-liquid'
-Bundle 'tpope/vim-markdown'
-Bundle 'derekwyatt/vim-sbt'
-Bundle 'derekwyatt/vim-scala'
-Bundle 'tpope/vim-vividchalk'
-Bundle 'JuliaLang/julia-vim'
 Bundle 'henrik/vim-qargs'
-Bundle 'kien/ctrlp.vim'
+Bundle 'kshenoy/vim-signature'
 
-" schemes
+" Colour schemes
 Bundle 'tomasr/molokai'
 Bundle 'zeis/vim-kolor'
 Bundle 'morhetz/gruvbox'
@@ -54,6 +71,7 @@ Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 Bundle 'wesgibbs/vim-irblack'
 Bundle 'ricardovaleriano/vim-github-theme'
 Bundle '29decibel/codeschool-vim-theme'
+Bundle 'tpope/vim-vividchalk'
 
 " You complete me needs Python an a new vim
 if has('python')
