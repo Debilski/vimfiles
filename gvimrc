@@ -12,9 +12,9 @@ function! SolarDark()
 set transparency=2
 endfunction
 
-set transparency=2
-
 if has("gui_macvim")
+  set transparency=2
+
   let macvim_hig_shift_movement = 1
   set selection=exclusive
 
