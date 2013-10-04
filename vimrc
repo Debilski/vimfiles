@@ -46,7 +46,7 @@ Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-liquid'
 
 " Additional plugins
-Bundle 'gnupg.vim'
+Bundle 'jamessan/vim-gnupg'
 Bundle 'kien/ctrlp.vim'
 Bundle 'ack.vim'
 Bundle 'lilydjwg/colorizer'
