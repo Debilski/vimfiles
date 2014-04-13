@@ -6,77 +6,85 @@ call vundle#rc()
 
 " let Vundle manage Vundle
 " required!
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
 " Defaults everyone can agree on
-Bundle 'tpope/vim-sensible'
-Bundle 'tpope/vim-sleuth'
+Plugin 'tpope/vim-sensible'
+Plugin 'tpope/vim-sleuth'
 
-Bundle 'bling/vim-airline'
-Bundle 'tpope/vim-fugitive'
+Plugin 'bling/vim-airline'
+Plugin 'tpope/vim-fugitive'
 
-Bundle 'altercation/vim-colors-solarized'
+Plugin 'altercation/vim-colors-solarized'
+
+Plugin 'tpope/timl'
 
 " Languages
-Bundle 'scrooloose/syntastic'
+Plugin 'scrooloose/syntastic'
+Plugin 'vim-scripts/xptemplate'
 
 " Scala
-Bundle 'derekwyatt/vim-sbt'
-Bundle 'derekwyatt/vim-scala'
+Plugin 'derekwyatt/vim-sbt'
+Plugin 'derekwyatt/vim-scala'
+Plugin 'rompetroll/vim-scalariform'
 
 " Julia
-Bundle 'JuliaLang/julia-vim'
+Plugin 'JuliaLang/julia-vim'
 
 " Haskell
-Bundle 'dag/vim2hs'
-Bundle 'ujihisa/neco-ghc'
-Bundle 'eagletmt/ghcmod-vim'
+Plugin 'dag/vim2hs'
+Plugin 'ujihisa/neco-ghc'
+Plugin 'eagletmt/ghcmod-vim'
 " needed for ghcmod
-Bundle 'Shougo/vimproc.vim'
+Plugin 'Shougo/vimproc.vim'
 
 " Clojure
-Bundle 'VimClojure'
+Plugin 'VimClojure'
+
+" Elixir
+Plugin 'elixir-lang/vim-elixir'
 
 " Other
-Bundle 'pangloss/vim-javascript'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'tpope/vim-haml'
-Bundle 'jcf/vim-latex'
-Bundle 'tpope/vim-markdown'
-Bundle 'tpope/vim-liquid'
+Plugin 'othree/html5.vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'tpope/vim-haml'
+Plugin 'jcf/vim-latex'
+Plugin 'tpope/vim-markdown'
+Plugin 'tpope/vim-liquid'
 
 " Additional plugins
-Bundle 'jamessan/vim-gnupg'
-Bundle 'kien/ctrlp.vim'
-Bundle 'ack.vim'
-Bundle 'lilydjwg/colorizer'
-Bundle 'gregsexton/gitv'
-Bundle 'sjl/gundo.vim'
-Bundle 'sjbach/lusty'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'scrooloose/nerdtree'
-Bundle 'majutsushi/tagbar'
-Bundle 'tpope/vim-abolish'
-Bundle 'tsaleh/vim-align'
-Bundle 'tpope/vim-eunuch'
-Bundle 'tpope/vim-git'
-Bundle 'henrik/vim-qargs'
-Bundle 'kshenoy/vim-signature'
+Plugin 'jamessan/vim-gnupg'
+Plugin 'kien/ctrlp.vim'
+Plugin 'ack.vim'
+Plugin 'lilydjwg/colorizer'
+Plugin 'gregsexton/gitv'
+Plugin 'sjl/gundo.vim'
+Plugin 'sjbach/lusty'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree'
+Plugin 'majutsushi/tagbar'
+Plugin 'tpope/vim-abolish'
+Plugin 'tsaleh/vim-align'
+Plugin 'tpope/vim-eunuch'
+Plugin 'tpope/vim-git'
+Plugin 'henrik/vim-qargs'
+Plugin 'kshenoy/vim-signature'
 
 " Colour schemes
-Bundle 'tomasr/molokai'
-Bundle 'zeis/vim-kolor'
-Bundle 'morhetz/gruvbox'
-Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
-Bundle 'wesgibbs/vim-irblack'
-Bundle 'ricardovaleriano/vim-github-theme'
-Bundle '29decibel/codeschool-vim-theme'
-Bundle 'tpope/vim-vividchalk'
+Plugin 'tomasr/molokai'
+Plugin 'zeis/vim-kolor'
+Plugin 'morhetz/gruvbox'
+Plugin 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
+Plugin 'wesgibbs/vim-irblack'
+Plugin 'ricardovaleriano/vim-github-theme'
+Plugin '29decibel/codeschool-vim-theme'
+Plugin 'tpope/vim-vividchalk'
 
 " You complete me needs Python an a new vim
 if has('python')
   if v:version >= 704 || ( v:version == 703 && has('patch584'))
-    Bundle 'Valloric/YouCompleteMe'
+    Plugin 'Valloric/YouCompleteMe'
   endif
 endif
 

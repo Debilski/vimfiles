@@ -9,13 +9,11 @@ Best used with MacVim.
 
 Included niceties
 -----------------
-We use [Vundle](https://github.com/gmarik/vundle) and git for plugin management. After cloning, a
+We use [Vundle](https://github.com/gmarik/vundle) for plugin management. Get it with
 
-    git submodule init
-    git submodule update
-    vim +BundleInstall +qall
-
-is vital in order to load all plugins.
+    cd $HOME
+    git clone https://github.com/gmarik/vundle.git .vim/bundle/vundle
+    vim +PluginInstall +qall
 
 
 Unincluded niceties
