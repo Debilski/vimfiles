@@ -23,6 +23,10 @@ Plugin 'tpope/timl'
 Plugin 'scrooloose/syntastic'
 Plugin 'vim-scripts/xptemplate'
 
+" Pandoc
+Plugin 'vim-pandoc/vim-pandoc'
+Plugin 'vim-pandoc/vim-pandoc-syntax'
+
 " Scala
 Plugin 'derekwyatt/vim-sbt'
 Plugin 'derekwyatt/vim-scala'
