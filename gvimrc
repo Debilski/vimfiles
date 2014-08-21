@@ -1,4 +1,4 @@
-set go-=T
+set guioptions-=T " remove toolbar
 
 function! SolarLight()
   colorscheme solarized
