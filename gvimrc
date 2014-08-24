@@ -24,6 +24,11 @@ if has("gui_macvim")
   nnoremap <F6> :execute "!vimiterm ".shellescape(getline('.'), 1)<CR>
   map <D-o> :CtrlP<CR>
 
+  map <D-ä> ä
+  map! <D-ä> <Esc> ä
+  map <D-ö> ö
+  map! <D-ö> <Esc> ö
+
   " Fullscreen takes up entire screen
   set fuoptions=maxhorz,maxvert
 
