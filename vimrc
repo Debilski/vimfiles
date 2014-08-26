@@ -1,99 +1,100 @@
 set nocompatible               " be iMproved
 filetype off                   " required!
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" let Vundle manage Vundle
-" required!
-Plugin 'gmarik/Vundle.vim'
+call plug#begin('~/.vim/plugged')
 
 " Defaults everyone can agree on
-Plugin 'tpope/vim-sensible'
-Plugin 'tpope/vim-sleuth'
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-sleuth'
 
-Plugin 'bling/vim-airline'
-Plugin 'tpope/vim-fugitive'
+Plug 'bling/vim-airline'
+Plug 'tpope/vim-fugitive'
 
-Plugin 'altercation/vim-colors-solarized'
+Plug 'altercation/vim-colors-solarized'
 
-Plugin 'tpope/timl'
+Plug 'tpope/timl'
 
 " Languages
-Plugin 'scrooloose/syntastic'
-Plugin 'vim-scripts/xptemplate'
+Plug 'scrooloose/syntastic'
+Plug 'vim-scripts/xptemplate'
 
 " Pandoc
-Plugin 'vim-pandoc/vim-pandoc'
-Plugin 'vim-pandoc/vim-pandoc-syntax'
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
 
 " Scala
-Plugin 'derekwyatt/vim-sbt'
-Plugin 'derekwyatt/vim-scala'
-Plugin 'rompetroll/vim-scalariform'
+Plug 'derekwyatt/vim-sbt'
+Plug 'derekwyatt/vim-scala'
+Plug 'rompetroll/vim-scalariform'
 
 " Julia
-Plugin 'JuliaLang/julia-vim'
+Plug 'JuliaLang/julia-vim'
 
 " Haskell
-Plugin 'dag/vim2hs'
-Plugin 'ujihisa/neco-ghc'
-Plugin 'eagletmt/ghcmod-vim'
+Plug 'dag/vim2hs'
+Plug 'ujihisa/neco-ghc'
+Plug 'eagletmt/ghcmod-vim'
 " needed for ghcmod
-Plugin 'Shougo/vimproc.vim'
+Plug 'Shougo/vimproc.vim'
 
 " Clojure
-Plugin 'VimClojure'
+Plug 'VimClojure'
 
 " Elixir
-Plugin 'elixir-lang/vim-elixir'
+Plug 'elixir-lang/vim-elixir'
 
 " Other
-Plugin 'othree/html5.vim'
-Plugin 'pangloss/vim-javascript'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'tpope/vim-haml'
-Plugin 'jcf/vim-latex'
-Plugin 'tpope/vim-markdown'
-Plugin 'tpope/vim-liquid'
+Plug 'othree/html5.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'kchmck/vim-coffee-script'
+Plug 'tpope/vim-haml'
+Plug 'jcf/vim-latex'
+Plug 'tpope/vim-markdown'
+Plug 'tpope/vim-liquid'
 
 " Additional plugins
-Plugin 'jamessan/vim-gnupg'
-Plugin 'kien/ctrlp.vim'
-Plugin 'ack.vim'
-Plugin 'lilydjwg/colorizer'
-Plugin 'gregsexton/gitv'
-Plugin 'sjl/gundo.vim'
-Plugin 'sjbach/lusty'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/nerdtree'
-Plugin 'majutsushi/tagbar'
-Plugin 'tpope/vim-abolish'
-Plugin 'tsaleh/vim-align'
-Plugin 'tpope/vim-eunuch'
-Plugin 'tpope/vim-git'
-Plugin 'henrik/vim-qargs'
-Plugin 'kshenoy/vim-signature'
+Plug 'jamessan/vim-gnupg'
+Plug 'kien/ctrlp.vim'
+Plug 'ack.vim'
+Plug 'lilydjwg/colorizer'
+Plug 'gregsexton/gitv'
+Plug 'sjl/gundo.vim'
+Plug 'sjbach/lusty'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'majutsushi/tagbar'
+Plug 'tpope/vim-abolish'
+Plug 'tsaleh/vim-align'
+Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-git'
+Plug 'henrik/vim-qargs'
+Plug 'kshenoy/vim-signature'
 
 " Colour schemes
-Plugin 'tomasr/molokai'
-Plugin 'zeis/vim-kolor'
-Plugin 'morhetz/gruvbox'
-Plugin 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
-Plugin 'wesgibbs/vim-irblack'
-Plugin 'ricardovaleriano/vim-github-theme'
-Plugin '29decibel/codeschool-vim-theme'
-Plugin 'tpope/vim-vividchalk'
+Plug 'tomasr/molokai'
+Plug 'zeis/vim-kolor'
+Plug 'morhetz/gruvbox'
+Plug 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
+Plug 'wesgibbs/vim-irblack'
+Plug 'ricardovaleriano/vim-github-theme'
+Plug '29decibel/codeschool-vim-theme'
+Plug 'tpope/vim-vividchalk'
 
 " You complete me needs Python an a new vim
 if has('python')
   if v:version >= 704 || ( v:version == 703 && has('patch584'))
-    Plugin 'Valloric/YouCompleteMe'
+    Plug 'Valloric/YouCompleteMe', { 'on': [] }
+
+    augroup load_ycm
+      autocmd!
+      autocmd InsertEnter * call plug#load('YouCompleteMe')
+                         \| call youcompleteme#Enable() | autocmd! load_ycm
+    augroup END
   endif
 endif
 
-call vundle#end()            " required
-filetype plugin indent on    " required
+call plug#end()                " required
+filetype plugin indent on      " required
 
 set number
 set list
