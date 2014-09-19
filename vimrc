@@ -41,7 +41,7 @@ Plug 'eagletmt/ghcmod-vim'
 Plug 'zenzike/vim-haskell'
 Plug 'enomsg/vim-haskellConcealPlus'
 " needed for ghcmod
-Plug 'Shougo/vimproc.vim'
+Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 
 " Idris
 Plug 'idris-hackers/idris-vim'
@@ -74,6 +74,7 @@ Plug 'sjl/gundo.vim'
 Plug 'sjbach/lusty'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-abolish'
 Plug 'tsaleh/vim-align'
@@ -96,7 +97,7 @@ Plug 'tpope/vim-vividchalk'
 " You complete me needs Python an a new vim
 if has('python')
   if v:version >= 704 || ( v:version == 703 && has('patch584'))
-    Plug 'Valloric/YouCompleteMe', { 'on': [] }
+    Plug 'Valloric/YouCompleteMe', { 'do': './install.sh', 'on': [] }
 
     augroup load_ycm
       autocmd!
