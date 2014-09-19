@@ -194,31 +194,12 @@ function NoPowerlineFonts()
   let g:airline_right_alt_sep="│"
 endfunction
 
+call PowerlineFonts()
+
 if has('neovim')
   let s:python_host_init = 'python -c "import neovim; neovim.start_host()"'
   let &initpython = s:python_host_init
 endif
-
-if has('python3')
-  python3 << EOF
-try:
-    from powerline.vim import setup as powerline_setup
-    powerline_setup()
-    del powerline_setup
-except ImportError:
-    pass
-EOF
-elseif has('python')
-  python << EOF
-try:
-    from powerline.vim import setup as powerline_setup
-    powerline_setup()
-    del powerline_setup
-except ImportError:
-    pass
-EOF
-endif
-
 
 map <silent> <Leader>e :Errors<CR>
 map <Leader>s :SyntasticToggleMode<CR>
