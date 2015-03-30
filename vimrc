@@ -20,7 +20,9 @@ Plug 'edkolev/tmuxline.vim'
 Plug 'scrooloose/syntastic'
 Plug 'vim-scripts/xptemplate'
 Plug 'msanders/snipmate.vim'
-Plug 'Shougo/neocomplete.vim'
+if has('lua')
+  Plug 'Shougo/neocomplete.vim'
+endif
 
 " Pandoc
 Plug 'vim-pandoc/vim-pandoc'
@@ -49,6 +51,9 @@ Plug 'idris-hackers/idris-vim'
 " Clojure
 Plug 'VimClojure'
 
+" Python
+Plug 'bfredl/nvim-ipy'
+
 " Elixir
 Plug 'elixir-lang/vim-elixir'
 
@@ -71,7 +76,9 @@ Plug 'gregsexton/gitv'
 Plug 'mhinz/vim-signify'
 " Plugin 'airblade/vim-gitgutter'
 Plug 'sjl/gundo.vim'
-Plug 'sjbach/lusty'
+if has('ruby')
+  Plug 'sjbach/lusty'
+endif
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -85,6 +92,8 @@ Plug 'kshenoy/vim-signature'
 Plug 'jpalardy/vim-slime'
 
 " Colour schemes
+Plug 'chriskempson/base16-vim'
+Plug 'junegunn/seoul256.vim'
 Plug 'tomasr/molokai'
 Plug 'zeis/vim-kolor'
 Plug 'morhetz/gruvbox'
@@ -197,6 +206,7 @@ endfunction
 call PowerlineFonts()
 
 if has('neovim')
+
   let s:python_host_init = 'python -c "import neovim; neovim.start_host()"'
   let &initpython = s:python_host_init
 endif
