@@ -12,7 +12,7 @@ Included niceties
 We use [Vundle](https://github.com/gmarik/vundle) for plugin management. Get it with
 
     cd $HOME
-    git clone https://github.com/gmarik/vundle.git .vim/bundle/vundle
+    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
     vim +PluginInstall +qall
 
 
